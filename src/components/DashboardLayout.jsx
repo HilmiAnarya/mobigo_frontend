@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link, Outlet, useNavigate } from 'react-router-dom';
-import { useAuth } from '../auth'; // <-- UPDATED IMPORT PATH
+import { useAuth } from '../auth';
 
 const DashboardLayout = () => {
-    // ... rest of the component is unchanged
     const auth = useAuth();
     const navigate = useNavigate();
 
@@ -19,6 +18,7 @@ const DashboardLayout = () => {
                 <nav className="mt-6">
                     <Link to="/" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700">Dashboard</Link>
                     <Link to="/vehicles" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700">Vehicles</Link>
+                    <Link to="/bookings" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700">Bookings</Link> {/* <-- Add new link */}
                 </nav>
             </aside>
             <div className="flex-1 flex flex-col">
